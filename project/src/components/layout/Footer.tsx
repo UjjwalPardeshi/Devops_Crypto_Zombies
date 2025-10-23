@@ -8,11 +8,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm">
-              &copy; {new Date().getFullYear()} CryptoZombies Clone. An educational project.
+              &copy; {new Date().getFullYear()} CryptoZombies. Devops Project 
             </p>
-            <p className="text-xs mt-1">
-              This is a clone created for educational purposes only. Not affiliated with the original CryptoZombies.
-            </p>
+            <p className="text-xs mt-1">            </p>
           </div>
           
           <div className="flex items-center space-x-6">
@@ -30,11 +28,6 @@ const Footer: React.FC = () => {
             >
               <Linkedin size={20} />
             </a>
-            <div className="flex items-center text-sm">
-              <span className="mr-1">Made with</span>
-              <Heart size={14} className="text-red-500 mx-1" />
-              <span>and React</span>
-            </div>
           </div>
         </div>
       </div>
