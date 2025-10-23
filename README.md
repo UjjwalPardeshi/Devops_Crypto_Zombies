@@ -9,6 +9,9 @@ A project integrating DevOps practices with the CryptoZombies Solidity tutorial.
 This project explores DevOps principles applied to a blockchain application, specifically the [CryptoZombies](https://cryptozombies.io/) tutorial. It includes automated workflows for building, testing, and deploying the smart contracts and any associated frontend components.
 
 Key features:
+* **Smart Contracts:** Solidity code based on the CryptoZombies lessons.
+* **DevOps Pipeline:** Automated CI/CD workflows using GitHub Actions (located in `.github/workflows`).
+* **Application Code:** The main project code (likely TypeScript-based) is located in the `/project` directory.
 
 ---
 
