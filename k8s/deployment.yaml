@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-zombies-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: crypto-zombies
+  template:
+    metadata:
+      labels:
+        app: crypto-zombies
+    spec:
+      containers:
+      - name: crypto-zombies-container
+        # ==> CHANGE 'yourdockerhubusername' TO YOURS
+        image: timthy45/crypto-zombies:latest
+        ports:
+        - containerPort: 80
+

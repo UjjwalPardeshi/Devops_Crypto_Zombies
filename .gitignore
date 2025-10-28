@@ -1,0 +1,8 @@
+# Ignore all infrastructure and server config
+terraform/
+ansible/
+
+# Ignore local files
+.kube/
+*.tfstate
+*.tfstate.*
