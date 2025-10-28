@@ -1,15 +1,8 @@
-FROM alpine:latest
+# Use the official Nginx image, which is a ready-to-use web server
+FROM nginx:stable-alpine
 
-# Install curl and other basic tools
-RUN apk add --no-cache curl
+# Copy all files from the current directory into the web server's public folder
+COPY . /usr/share/nginx/html
 
-# Add a script that will redirect to your Netlify URL
-COPY redirect.sh /redirect.sh
-RUN chmod +x /redirect.sh
-
-# Health check to make it appear active
-HEALTHCHECK --interval=30s --timeout=3s \
-  CMD curl -f http://localhost/ || exit 1
-
-# This container does nothing but stay alive
-CMD ["tail", "-f", "/dev/null"]
+# Expose port 80 (which Nginx uses by default)
+EXPOSE 80
